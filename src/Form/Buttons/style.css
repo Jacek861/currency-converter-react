@@ -1,0 +1,10 @@
+.form__button {
+    width: 100%;
+    border: none;
+    background-color: lightslategrey;
+    border-radius: 5px;
+}
+
+.form__button:hover{
+    color:brown;
+}
