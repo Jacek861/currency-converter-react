@@ -1,6 +1,6 @@
 import "./style.css";
 
-export const Buttons = () => (
+export const Buttons = ({ onResetClick }) => (
     <p>
         <button
             className="form__button"
@@ -9,9 +9,8 @@ export const Buttons = () => (
             Convert
         </button>
         <button
-            type="reset"
             className="form__button"
-            
+            onClick={onResetClick}
         >
             Clear
         </button>
