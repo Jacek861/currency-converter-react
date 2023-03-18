@@ -22,9 +22,9 @@ export const Form = () => {
     });
   };
 
-  const onFieldsetSubmit = (event) => {
+  const onFormSubmit = (event) => {
     event.preventDefault();
-    calculateResult(currency, amount);
+    calculateResult(amount, currency);
   };
 
   const onResetClick = () => {
@@ -34,7 +34,7 @@ export const Form = () => {
   };
 
   return (
-    <fieldset className="form__fieldset" onSubmit={onFieldsetSubmit} >
+    <fieldset className="form__fieldset" onSubmit={onFormSubmit} >
       <Clock />
       <Header title="Currency converter" />
       <p>
