@@ -1,3 +1,4 @@
+import "./style.css"
 import { useState, useEffect } from "react";
 
 export const Clock = () => {
@@ -14,7 +15,7 @@ export const Clock = () => {
     }, []);
 
     return (
-        <div>
+        <div className="clock">
             {currentDate.toLocaleDateString("en-EN", {
                 weekday: "long",
                 day: "numeric",
