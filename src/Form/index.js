@@ -11,7 +11,7 @@ export const Form = () => {
   const [currency, setCurrency] = useState(currencies[0].shortName);
   const [result, setResult] = useState();
 
- 
+
   const calculateResult = (amount, currency) => {
     const rate = currencies.find(({ shortName }) => shortName === currency).rate;
 
@@ -30,15 +30,18 @@ export const Form = () => {
   const onResetClick = () => {
     setAmount("");
     setCurrency(currencies[0].shortName);
-    setResult("");
+    setResult();
   };
 
   return (
-    <fieldset className="form__fieldset" onSubmit={onFormSubmit} >
+    <form className="form" onSubmit={onFormSubmit}>
       <Clock />
       <Header title="Currency converter" />
+      <p className="form__paragrath">
+        *Required Form Field
+      </p>
       <p>
-        <label>
+        <label className="form__label">
           <span className="form__labelText">
             Amount PLN*:
           </span>
@@ -53,9 +56,9 @@ export const Form = () => {
         </label>
       </p>
       <p>
-        <label>
+        <label className="form__label">
           <span className="form__labelText">
-            Currency:
+            Currency*:
           </span>
           <select
             className="form__field"
@@ -73,17 +76,13 @@ export const Form = () => {
           </select>
         </label>
       </p>
-
-      <p className="form__paragrath">
-        Currency Rates according to NBP Table number 014/A/NBP/2023, date: 20/01/2023
-      </p>
-      <p className="form__paragrath">
-        *Required Form Field
-      </p>
       <Buttons
         onResetClick={onResetClick}
       />
       <Result result={result} />
-    </fieldset>
+      <p className="form__paragrath">
+        Currency Rates according to NBP Table number 014/A/NBP/2023, date: 20/01/2023
+      </p>
+    </form>
   )
 };
