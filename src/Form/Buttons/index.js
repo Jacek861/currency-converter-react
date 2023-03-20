@@ -1,7 +1,7 @@
 import "./style.css";
 
 export const Buttons = ({ onResetClick }) => (
-    <p>
+    <div className="form__container">
         <button
             className="form__button"
             type="submit"
@@ -11,8 +11,9 @@ export const Buttons = ({ onResetClick }) => (
         <button
             className="form__button"
             onClick={onResetClick}
+            type="reset"
         >
             Clear
         </button>
-    </p>
+    </div>
 );

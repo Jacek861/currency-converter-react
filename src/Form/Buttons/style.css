@@ -1,10 +1,30 @@
+.form__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+@media (max-width: 767px) {
+    .form__container {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+}
+
 .form__button {
-    width: 100%;
+    width: 60%;
     border: none;
     background-color: lightslategrey;
     border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 2px 2px 10px black;
+    transition: background 2s, transform 0.5s; 
 }
 
-.form__button:hover{
-    color:brown;
+.form__button:hover {
+    color: brown;
+    background-color: rgb(255, 255, 255);
+    transform: scale(1.1)
 }
