@@ -1,4 +1,4 @@
-import "./style.css"
+import "./style.css";
 import { useState, useEffect } from "react";
 
 export const Clock = () => {
@@ -20,11 +20,10 @@ export const Clock = () => {
                 weekday: "long",
                 day: "numeric",
                 month: "long",
-                hour: "numeric",
-                minute: "numeric",
-                second: "numeric"
             })}
+            {", "}
+            {currentDate.toLocaleTimeString()}
         </div>
-    )
+    );
 };
 
