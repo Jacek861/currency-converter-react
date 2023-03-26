@@ -5,6 +5,7 @@ Simple Online Currency Converter made as part of YouCode task.
 
 ### Show site  (https://jacek861.github.io/currency-converter-react/)
 
+![Currency-conventer-react GIF](src/images/Animation.gif)
 
 ## Technologies
 - HTML
