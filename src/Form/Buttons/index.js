@@ -1,15 +1,15 @@
 import "./style.css";
 
 export const Buttons = ({ onResetClick }) => (
-    <div className="form__container">
+    <div className="buttons">
         <button
-            className="form__button"
+            className="buttons__button"
             type="submit"
         >
             Convert
         </button>
         <button
-            className="form__button"
+            className="buttons__button"
             onClick={onResetClick}
             type="reset"
         >

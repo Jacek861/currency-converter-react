@@ -1,17 +1,17 @@
-.form__container {
+.buttons {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
 }
 
 @media (max-width: 767px) {
-    .form__container {
+    .buttons {
         grid-template-columns: 1fr;
         grid-gap: 20px;
     }
 }
 
-.form__button {
+.buttons__button {
     width: 60%;
     border: none;
     background-color: lightslategrey;
@@ -23,7 +23,7 @@
     transition: background 2s, transform 0.5s; 
 }
 
-.form__button:hover {
+.buttons__button:hover {
     color: brown;
     background-color: rgb(255, 255, 255);
     transform: scale(1.1)
