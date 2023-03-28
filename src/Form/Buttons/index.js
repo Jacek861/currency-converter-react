@@ -1,4 +1,4 @@
-import { DivButtons, Button } from "./styled";
+import { DivButtons, Button } from "./style";
 
 export const Buttons = ({ onResetClick }) => (
     <DivButtons>
