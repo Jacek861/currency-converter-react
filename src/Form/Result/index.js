@@ -1,7 +1,7 @@
-import "./style.css";
+import { StyledResult } from "./style.js"
 
 export const Result = ({ result }) => (
-  <p className="result">
+  <StyledResult>
     {result !== undefined && (
       <>
         {result.basicAmount.toFixed(2)}&nbsp;PLN&nbsp;= {" "}
@@ -11,5 +11,5 @@ export const Result = ({ result }) => (
         </strong>
       </>
     )}
-  </p>
+  </StyledResult>
 );
