@@ -1,4 +1,4 @@
-import { StyledResult } from "./style.js"
+import { StyledResult } from "./styled.js"
 
 export const Result = ({ result }) => (
   <StyledResult>
