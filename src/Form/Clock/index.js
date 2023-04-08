@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { StyledClock } from "./style";
+import { StyledClock } from "./styled";
 
 export const Clock = () => {
     const [currentDate, setCurrentDate] = useState(new Date());
