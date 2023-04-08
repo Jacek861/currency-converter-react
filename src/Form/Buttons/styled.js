@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-export const DivButtons = styled.div`
+export const StyledButtons = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
@@ -27,4 +27,8 @@ export const Button = styled.button`
         background-color: rgb(255, 255, 255);
         transform: scale(1.1)
     }
+
+    ${({fresh}) => fresh && css`
+        color: red;
+    `}
 `;

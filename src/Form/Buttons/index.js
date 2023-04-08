@@ -1,7 +1,7 @@
-import { DivButtons, Button } from "./style";
+import { StyledButtons, Button } from "./styled";
 
 export const Buttons = ({ onResetClick }) => (
-    <DivButtons>
+    <StyledButtons>
         <Button
             type="submit"
         >
@@ -10,8 +10,9 @@ export const Buttons = ({ onResetClick }) => (
         <Button
             onClick={onResetClick}
             type="reset"
+            fresh
         >
             Clear
         </Button>
-    </DivButtons>
+    </StyledButtons>
 );
