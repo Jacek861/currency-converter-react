@@ -1,4 +1,9 @@
-import "./style.css";
+import { StyledForm, 
+  StyledLabel, 
+  StyledLabelText, 
+  StyledInput, 
+  StyledParagrath, 
+  StyledSelect } from "./styled.js"
 import { Header } from "./Header";
 import { Buttons } from "./Buttons";
 import { Result } from "./Result";
@@ -34,34 +39,32 @@ export const Form = () => {
   };
 
   return (
-    <form className="form" onSubmit={onFormSubmit}>
+    <StyledForm onSubmit={onFormSubmit}>
       <Clock />
       <Header title="Currency converter" />
-      <p className="form__paragrath">
+      <StyledParagrath>
         *Required Form Field
-      </p>
+      </StyledParagrath>
       <p>
-        <label className="form__label">
-          <span className="form__labelText">
+        <StyledLabel>
+          <StyledLabelText>
             Amount PLN*:
-          </span>
-          <input
+          </StyledLabelText>
+          <StyledInput
             value={amount}
             onChange={({ target }) => setAmount(target.value)}
-            className="form__field"
             type="number"
             placeholder="Enter amount"
             step="0.1"
             required />
-        </label>
+        </StyledLabel>
       </p>
       <p>
-        <label className="form__label">
-          <span className="form__labelText">
+        <StyledLabel>
+          <StyledLabelText>
             Currency*:
-          </span>
-          <select
-            className="form__field"
+          </StyledLabelText>
+          <StyledSelect
             value={currency}
             onChange={({ target }) => setCurrency(target.value)}
           >
@@ -73,16 +76,16 @@ export const Form = () => {
                 {currency.longName}
               </option>
             )))}
-          </select>
-        </label>
+          </StyledSelect>
+        </StyledLabel>
       </p>
       <Buttons
         onResetClick={onResetClick}
       />
       <Result result={result} />
-      <p className="form__paragrath">
+      <StyledParagrath>
         Currency Rates according to NBP Table number 014/A/NBP/2023, date: 20/01/2023
-      </p>
-    </form>
+      </StyledParagrath>
+    </StyledForm>
   )
 };
